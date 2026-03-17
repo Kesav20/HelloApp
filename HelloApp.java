@@ -1,16 +1,19 @@
 /*
-* HelloApp-java - A simple Java application that greets the user by name if
-* provided as a command-line argument, or defaults to greeting "World" if no name is
-* given 
+* HelloApp - UC4 - A simple Java application that greets multiple users by name if
+* provided as command-line arguments, or defaults to greeting "World" if no names are given.
 * @author
-* @version 3.0
+* @version 4.0
 */
 public class HelloApp {
-
     public static void main(String[] args) {
 
-        String name = (args.length > 0) ? args[0] : "World";
-        System.out.println("Hello, " + name + "!");
+        if (args.length == 0) {
+            System.out.println("Hello World");
+        } else {
+            for (int i = 0; i < args.length; i++) {
+                System.out.println("Hello " + args[i]);
+            }
+        }
 
     }
 }
