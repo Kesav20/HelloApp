@@ -1,17 +1,17 @@
 /*
-* HelloApp - UC4 - A simple Java application that greets multiple users by name if
-* provided as command-line arguments, or defaults to greeting "World" if no names are given.
+* UC 5: Display "Hello" with Multiple Command-Line Arguments using Enhanced For
+* Loop or Default Message
 * @author
-* @version 4.0
+* @version 5.0
 */
 public class HelloApp {
     public static void main(String[] args) {
 
         if (args.length == 0) {
-            System.out.println("Hello World");
+            System.out.println("Hello, World!");
         } else {
-            for (int i = 0; i < args.length; i++) {
-                System.out.println("Hello " + args[i]);
+            for (String name : args) {
+                System.out.println("Hello " + name);
             }
         }
 
