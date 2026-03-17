@@ -1,18 +1,16 @@
 /*
-* HelloApp.java - A simple Java application that Displays "Hello, World!" to the console.
-* @author 
-* @version 2.0
+* HelloApp-java - A simple Java application that greets the user by name if
+* provided as a command-line argument, or defaults to greeting "World" if no name is
+* given 
+* @author
+* @version 3.0
 */
 public class HelloApp {
 
     public static void main(String[] args) {
 
-        if (args.length > 0) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
-        } else {
-            System.out.println("Hello, World!");
-        }
+        String name = (args.length > 0) ? args[0] : "World";
+        System.out.println("Hello, " + name + "!");
 
     }
 }
